@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro da pessoa</title>
+    <link rel="stylesheet" href="Aula04Pratica02.css">
+</head>
+<body>
+    <div class="p1">
+        <p>Cadastro de pessoa: </p>       
+        <div class="d1" id="d1">
+            <label for="Nome">Nome:</label>
+            <input type="text">
+            <br>
+            <label for="Sobrenome">Sobrenome</label>
+            <input type="text">
+            <br>
+            <label for="Email">Email</label>
+            <input type="email">
+        </div>
+        <br>
+        <div class="d2">
+            <label for="Data">Data de nascimento</label>
+            <input type="date">
+            <br>
+            <label for="Masculino">Masculino</label>
+            <input type="radio" name="Sexo" id="Sexo">
+        
+            <label for="Feminino">Feminino</label>
+            <input type="radio" name="Sexo" id="Sexo">
+        </div>  
+            <br>
+        <div class="d2">  
+            <label for="Endereço">Endereço</label>
+            <input type="text">
+            <br>
+            <label for="CEP">CEP</label>
+            <input type="text">
+            <br>
+            <label for="Estado">Estado (UF)</label>
+            <select id="estados" name="estados">
+                <option value="AC">Acre (AC)</option>
+                <option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+              </select>
+        </div>
+        <br>
+        <div class="cadeia">
+            <input type="submit" name="Enviar" id="Enviar">
+            <input type="button" name="Limpar" id="Limpar" value="Limpar">
+        </div>
+    </div>
+</body>
+</html>
