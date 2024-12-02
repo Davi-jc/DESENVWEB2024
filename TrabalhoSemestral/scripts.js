@@ -1,4 +1,4 @@
-// frontend/js/scripts.js
+
 
 document.getElementById('evaluationForm').addEventListener('submit', function(e) {
     const respostas = document.querySelectorAll('input[type="number"]');
