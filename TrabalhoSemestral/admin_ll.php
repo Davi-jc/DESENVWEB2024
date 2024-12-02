@@ -6,7 +6,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
 }
 require_once 'database.php';
 
-// Adicionar novo dispositivo
+
 if (isset($_POST['add_device'])) {
     $nome = htmlspecialchars(trim($_POST['nome']));
     $status = $_POST['status'] === 'ativo' ? 'ativo' : 'inativo';
@@ -17,7 +17,7 @@ if (isset($_POST['add_device'])) {
     exit;
 }
 
-// Editar dispositivo
+
 if (isset($_POST['edit_device'])) {
     $id = intval($_POST['id']);
     $nome = htmlspecialchars(trim($_POST['nome']));
@@ -29,7 +29,7 @@ if (isset($_POST['edit_device'])) {
     exit;
 }
 
-// Carregar dispositivo para edição via GET
+
 $editing_device = false;
 if (isset($_GET['edit'])) {
     $editing_device = true;
@@ -39,7 +39,6 @@ if (isset($_GET['edit'])) {
     $dispositivo_edit = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-// Desabilitar dispositivo via GET
 if (isset($_GET['disable'])) {
     $id = intval($_GET['disable']);
     $stmt = $pdo->prepare("UPDATE dispositivos SET status = 'inativo' WHERE id = ?");
@@ -48,12 +47,12 @@ if (isset($_GET['disable'])) {
     exit;
 }
 
-// Obter todos os dispositivos
+
 $stmt = $pdo->prepare("SELECT d.*, s.nome AS setor_nome FROM dispositivos d JOIN setores s ON d.setor_id = s.id ORDER BY d.id ASC");
 $stmt->execute();
 $dispositivos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Obter setores para seleção
+
 $stmt = $pdo->prepare("SELECT * FROM setores WHERE status = 'ativo' ORDER BY nome ASC");
 $stmt->execute();
 $setores = $stmt->fetchAll(PDO::FETCH_ASSOC);
